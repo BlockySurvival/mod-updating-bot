@@ -36,7 +36,7 @@ Warning: The bot will expect to already be joined to the specified channels
 and won't attempt to join them itself.
 
 It's probably possible to connect the bot to IRC as well, however this bot,
-along with most IRC clients and servers, don't support multi-line messages.
+along with most IRC clients and servers, doesn't support multi-line messages.
 
 ## Important
 
