@@ -22,7 +22,7 @@ and not `miniirc_discord`.
 
 
 ```py
-CHANNELS = ('#server-staff:example.com', '#server:example.com')
+CHANNELS = ('!room-id:example.com', '!room-id-2:example.com')
 DISALLOWED = ('@baduser:example.com',)
 HOMESERVER = 'matrix.example.com'
 TOKEN = '(Discord token)'
