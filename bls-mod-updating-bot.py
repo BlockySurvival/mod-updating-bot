@@ -32,7 +32,7 @@ def handler(irc, hostmask, args):
         except Exception as exc:
             irc.msg(args[0], f'{exc.__class__.__name__}: {exc}')
             raise
-        irc.msg(args[0], f'```\n{logs}\n```')
+        irc.msg(args[0], logs)
         return
     elif lmsg != 'do the thing':
         return
