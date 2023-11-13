@@ -32,7 +32,7 @@ def handler(irc, hostmask, args):
         except Exception as exc:
             irc.msg(args[0], f'{exc.__class__.__name__}: {exc}')
             raise
-        irc.msg(args[0], logs)
+        irc.msg(args[0], f'```\n{logs}\n```')
         return
     elif lmsg != 'do the thing':
         return
@@ -67,7 +67,7 @@ def read_crash_logs(fn):
     # This uses grep because I'm not sure how fast this would be in Python
     try:
         return subprocess.check_output((
-            'grep', '-P', r'^[0-9\-]+ [0-9:]+ ERROR\[Main\]: '
+            'grep', '-aP', r'^[0-9\-]+ [0-9:]+ ERROR\[Main\]: '
             r'(?!The following mods could not be found)', '--', fn,
         )).decode('utf-8', 'replace')
     except subprocess.CalledProcessError:
